@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 1 - Introduccion a R y RStudio</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <p class="kicker">Curso</p>
+    <h1>Ciencia de Datos en R para la Investigacion</h1>
+  </div>
+  <nav class="site-nav">
+    <a href="../index.html">Inicio</a>
+    <a href="../syllabus.pdf">Programa del curso</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="post-header">
+    <div class="fecha">Sesiones 1 y 2 - 2026 (completar fecha)</div>
+    <h1>Introduccion a R y RStudio</h1>
+  </div>
+
+  <div class="post-body">
+    <p>
+      Se dicto en dos sesiones: fundamentos del lenguaje orientado a objetos,
+      tipos de datos basicos (numeric, character, logical), vectores y sus
+      operaciones (indexacion, orden, pertenencia), matrices, y data frames
+      con columnas de distinto tipo: creacion, exploracion, subsetting,
+      ordenamiento y tablas de frecuencia.
+    </p>
+
+    <p>Ejemplo de vectores e indexacion:</p>
+    <pre><code>tor &lt;- c(57, 7, 102, 2, 34, 11)  # vector
+
+sort(tor)
+tor[tor %in% c(3, 5, 11)]         # indexacion por pertenencia
+tor[tor > 11]                     # indexacion logica</code></pre>
+
+    <p>Ejemplo de data frame:</p>
+    <pre><code>temps &lt;- data.frame(
+  tmin  = c(8.5, 11.5, 12.2, 14.3, 11.5, 9.1),
+  tmax  = c(28.5, 27.1, 23.3, 16.6, 20.1, 21.7),
+  dia   = c("lun","lun","mar","mar","mier","mier"),
+  lugar = c("talca","chillan","talca","chillan","talca","chillan")
+)
+
+subset(temps, lugar == "chillan")
+tapply(temps$tmin, temps$lugar, mean)</code></pre>
+
+    <p>
+      Ejercicio propuesto: armar un mazo de cartas digital en R con columnas
+      nombre, pinta y valor (el as vale 14, no 1).
+    </p>
+  </div>
+
+  <div class="material-box">
+    <h4>Material de la clase</h4>
+    <ul class="material-list">
+      <li><span class="badge R">R</span> <a href="../scripts/clase1_cdr26.R">clase1_cdr26.R</a></li>
+      <li><span class="badge PPT">PPT</span> <a href="../slides/1.1.intro_CursoR_2026.pdf">1.1.intro_CursoR_2026.pdf</a> (sesion 1)</li>
+      <li><span class="badge PPT">PPT</span> <a href="../slides/1.2.intro_CursoR_2026.pdf">1.2.intro_CursoR_2026.pdf</a> (sesion 2)</li>
+    </ul>
+  </div>
+
+  <a class="volver" href="../index.html">Volver al inicio</a>
+
+</main>
+
+<footer class="site-footer">
+  Blog del curso. Material tambien disponible en la carpeta compartida con los alumnos.
+</footer>
+
+</body>
+</html>

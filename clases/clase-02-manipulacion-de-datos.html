@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Clase 2 - Lectura de datos, dplyr y ggplot2</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <p class="kicker">Curso</p>
+    <h1>Ciencia de Datos en R para la Investigacion</h1>
+  </div>
+  <nav class="site-nav">
+    <a href="../index.html">Inicio</a>
+    <a href="../syllabus.pdf">Programa del curso</a>
+  </nav>
+</header>
+<main>
+  <div class="post-header">
+    <div class="fecha">Sesion 3 - 8 de julio, 2026</div>
+    <h1>Lectura de datos, dplyr y primeras graficas con ggplot2</h1>
+  </div>
+  <div class="post-body">
+    <p>
+      Trabajamos el mismo dataset (d1.nativas) en sus tres formatos para
+      practicar formas de importar datos a R: read.table(), read.csv() y
+      read_excel(). Despues dplyr (select, filter, arrange, mutate, group_by
+      + summarise, joins, el operador pipe) y cerramos con las primeras
+      capas de ggplot2.
+    </p>
+    <pre><code>nat.t &lt;- read.table("d1.nativas.txt", header = TRUE)
+nat.c &lt;- read.csv("d1.nativas.csv", header = TRUE,
+                   stringsAsFactors = TRUE,
+                   na.strings = c("NAN","Na","na","NA"))
+library(readxl)
+nat.x &lt;- read_excel("d1.nativas.xlsx", sheet = "bosque", na = "na")</code></pre>
+  </div>
+  <div class="material-box">
+    <h4>Material de la clase</h4>
+    <ul class="material-list">
+      <li><span class="badge R">R</span> <a href="../scripts/clase2.cdr26.r">clase2.cdr26.r</a></li>
+      <li><span class="badge DATA">DATA</span> <a href="../datasets/d1.nativas.csv">d1.nativas.csv</a></li>
+      <li><span class="badge DATA">DATA</span> <a href="../datasets/d1.nativas.txt">d1.nativas.txt</a></li>
+      <li><span class="badge DATA">DATA</span> <a href="../datasets/d1.nativas.xlsx">d1.nativas.xlsx</a></li>
+    </ul>
+    <p style="margin:0.8rem 0 0;font-size:0.85rem;color:var(--texto-suave);">Diapositivas de ggplot2: proximamente.</p>
+  </div>
+  <div class="post-body">
+    <p>Ejemplo de dplyr + pipe visto en clase:</p>
+    <pre><code>library(dplyr)
+nat.x %&gt;%
+  group_by(spp, trat, tiempo) %&gt;%
+  summarise(nu.prom = mean(nudos), nu.std = sd(nudos), ene = n())</code></pre>
+    <p>Para llamar el dataset directo desde R, una vez subido el repo:</p>
+    <pre><code>datos &lt;- read.csv("https://raw.githubusercontent.com/iansajid-dotcom/TU-REPO/main/datasets/d1.nativas.csv")</code></pre>
+    <p>Reemplaza TU-REPO por el nombre real del repositorio.</p>
+  </div>
+  <a class="volver" href="../index.html">Volver al inicio</a>
+</main>
+<footer class="site-footer">Blog del curso.</footer>
+</body>
+</html>
