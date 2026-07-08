@@ -25,11 +25,11 @@ clases/clase-01-introduccion-a-r.html — es un placeholder.
 
 ## Cómo agregar una clase nueva
 
-1. Copiá `clases/_plantilla.html` y renombralo, ej: `clases/clase-03-ggplot2.html`.
-2. Completá título, fecha, resumen y el código de ejemplo.
-3. Subí el script a `scripts/`, el dataset a `datasets/` y la presentación a
+1. Copia `clases/_plantilla.html` y renombralo, ej: `clases/clase-03-ggplot2.html`.
+2. Completa título, fecha, resumen y el código de ejemplo.
+3. Sube el script a `scripts/`, el dataset a `datasets/` y la presentación a
    `slides/`, y actualizá los links del bloque "Material de la clase".
-4. Agregá un `<article class="post-card">` nuevo en `index.html` (arriba de
+4. Agrega un `<article class="post-card">` nuevo en `index.html` (arriba de
    los anteriores, para que quede primero por fecha) con el link a `clases/...`.
 
 No hace falta compilar nada — son archivos HTML planos.
@@ -45,7 +45,7 @@ cualquier trabajo de investigación reproducible.
    arrastrá todo lo de adentro de `blog-r-curso` (no la carpeta contenedora)
    para que `index.html` quede en la raíz del repo.
 3. Settings → Pages → Source: rama `main`, carpeta `/ (root)` → Save.
-4. GitHub te da una URL tipo `https://iansajid-dotcom.github.io/tu-repo/` —
+4. GitHub te da una URL tipo `https://iansajid-dotcom.github.io/erre.utal/` —
    esa es la que compartís con los alumnos.
 5. Cada vez que agregues una clase, subís los archivos nuevos y el sitio se
    actualiza solo, en 1-2 minutos.
@@ -55,7 +55,7 @@ cualquier trabajo de investigación reproducible.
 Una vez subido el repo, cada archivo tiene una URL "raw":
 
 ```
-https://raw.githubusercontent.com/iansajid-dotcom/TU-REPO/main/datasets/d1.nativas.csv
+https://raw.githubusercontent.com/iansajid-dotcom/erre.utal/main/datasets/d1.nativas.csv
 ```
 
 ```r
