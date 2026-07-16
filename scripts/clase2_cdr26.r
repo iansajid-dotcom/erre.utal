@@ -163,10 +163,4 @@ nat.ti %>%
 
 
 
-# fin
-summarise(group_by(nat.x, spp, trat), 
-          prom = mean(nudos), std=sd(nudos))
-#
-
-summarise(group_by(nat.x, spp), ene = n())
-
+#fin

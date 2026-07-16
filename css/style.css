@@ -171,6 +171,25 @@ article.post-card:last-child { border-bottom: none; }
 .badge.PPT { background: #d9713c; }
 .badge.PDF { background: #b3413a; }
 .badge.DATA { background: var(--acento); }
+.badge.DOCX { background: #5a4a9c; }
+
+.post-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.4rem;
+  font-size: 0.88rem;
+}
+
+.post-body th, .post-body td {
+  border: 1px solid var(--borde);
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+}
+
+.post-body th {
+  background: #eaf1f9;
+  color: var(--azul-oscuro);
+}
 
 .post-body pre {
   background: #1e2530;
